@@ -1,0 +1,36 @@
+2026-05-11 13:07:01 | INFO     | [main.py:9] | ==========================================
+2026-05-11 13:07:01 | INFO     | [main.py:10] | INICIANDO PIPELINE DE ANÁLISIS MÉDICO MIT
+2026-05-11 13:07:01 | INFO     | [main.py:11] | ==========================================
+2026-05-11 13:07:01 | INFO     | [data_prep.py:12] | Cargando datos desde: data/Hipertension_Arterial_Mexico.csv
+2026-05-11 13:07:01 | ERROR    | [data_prep.py:18] | No se encontro el archivo en la ruta: data/Hipertension_Arterial_Mexico.csv
+2026-05-11 13:07:01 | CRITICAL | [main.py:28] | Falla catastrófica en el pipeline: [Errno 2] No such file or directory: 'data/Hipertension_Arterial_Mexico.csv'
+Traceback (most recent call last):
+  File "/home/kanet/proyectos/mexico-hypertension-risk-prediction/main.py", line 15, in main
+    X_raw, y = load_and_clean_data(data_path)
+  File "/home/kanet/proyectos/mexico-hypertension-risk-prediction/src/data_prep.py", line 15, in load_and_clean_data
+    df = pd.read_csv(filepath)
+  File "/home/kanet/proyectos/mexico-hypertension-risk-prediction/venv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/kanet/proyectos/mexico-hypertension-risk-prediction/venv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/kanet/proyectos/mexico-hypertension-risk-prediction/venv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/kanet/proyectos/mexico-hypertension-risk-prediction/venv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/home/kanet/proyectos/mexico-hypertension-risk-prediction/venv/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/Hipertension_Arterial_Mexico.csv'
+2026-05-11 13:07:01 | INFO     | [main.py:30] | PIPELINE FINALIZADO EXITOSAMENTE.
+2026-05-11 13:08:09 | INFO     | [main.py:9] | ==========================================
+2026-05-11 13:08:09 | INFO     | [main.py:10] | INICIANDO PIPELINE DE ANÁLISIS MÉDICO MIT
+2026-05-11 13:08:09 | INFO     | [main.py:11] | ==========================================
+2026-05-11 13:08:09 | INFO     | [data_prep.py:12] | Cargando datos desde: data/../data/raw/Hipertension_Arterial_Mexico.csv
+2026-05-11 13:08:09 | INFO     | [data_prep.py:16] | Datos cargados exitosamente.
+Forma:
+(4363, 36)
+2026-05-11 13:08:09 | INFO     | [data_prep.py:26] | Rellenando valores nulos usando la mediana.
+2026-05-11 13:08:10 | INFO     | [data_prep.py:38] | Escalando las caracteristicas numericas ...
+2026-05-11 13:08:10 | INFO     | [main.py:17] | Verificando consistencia de los datos...
+2026-05-11 13:08:10 | INFO     | [main.py:19] | ÉXITO: Se procesaron 4363 registros médicos.
+2026-05-11 13:08:10 | INFO     | [main.py:20] | Características detectadas: ['FOLIO_I', 'sexo', 'edad', 'concentracion_hemoglobina', 'temperatura_ambiente', 'valor_acido_urico', 'valor_albumina', 'valor_colesterol_hdl', 'valor_colesterol_ldl', 'valor_colesterol_total', 'valor_creatina', 'resultado_glucosa', 'valor_insulina', 'valor_trigliceridos', 'resultado_glucosa_promedio', 'valor_hemoglobina_glucosilada', 'valor_ferritina', 'valor_folato', 'valor_homocisteina', 'valor_proteinac_reactiva', 'valor_transferrina', 'valor_vitamina_bdoce', 'valor_vitamina_d', 'peso', 'estatura', 'medida_cintura', 'segundamedicion_peso', 'segundamedicion_estatura', 'distancia_rodilla_talon', 'circunferencia_de_la_pantorrilla', 'segundamedicion_cintura', 'tension_arterial', 'sueno_horas', 'masa_corporal', 'actividad_total']
+2026-05-11 13:08:10 | INFO     | [main.py:30] | PIPELINE FINALIZADO EXITOSAMENTE.
