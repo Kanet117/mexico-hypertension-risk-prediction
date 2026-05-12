@@ -1,0 +1,51 @@
+=== Resumen Estadístico ===
+              FOLIO_I         sexo         edad  concentracion_hemoglobina  temperatura_ambiente  valor_acido_urico  valor_albumina  valor_colesterol_hdl  valor_colesterol_ldl  valor_colesterol_total  valor_creatina  resultado_glucosa  valor_insulina  valor_trigliceridos  resultado_glucosa_promedio  valor_hemoglobina_glucosilada  valor_ferritina  valor_folato  valor_homocisteina  valor_proteinac_reactiva  valor_transferrina  valor_vitamina_bdoce  valor_vitamina_d         peso     estatura  medida_cintura  segundamedicion_peso  segundamedicion_estatura  distancia_rodilla_talon  circunferencia_de_la_pantorrilla  segundamedicion_cintura  tension_arterial  sueno_horas  masa_corporal  actividad_total  riesgo_hipertension
+count            4363  4363.000000  4363.000000                4363.000000           4363.000000        4363.000000     4363.000000           4363.000000           4363.000000             4363.000000     4363.000000        4363.000000     4363.000000          4363.000000                 4363.000000                    4363.000000      4363.000000   4363.000000         4363.000000               4363.000000         4363.000000           4363.000000       4363.000000  4363.000000  4363.000000     4363.000000           4363.000000               4363.000000              4363.000000                       4363.000000              4363.000000       4363.000000  4363.000000    4363.000000      4363.000000          4363.000000
+unique           4363          NaN          NaN                        NaN                   NaN                NaN             NaN                   NaN                   NaN                     NaN             NaN                NaN             NaN                  NaN                         NaN                            NaN              NaN           NaN                 NaN                       NaN                 NaN                   NaN               NaN          NaN          NaN             NaN                   NaN                       NaN                      NaN                               NaN                      NaN               NaN          NaN            NaN              NaN                  NaN
+top     2022_32056030          NaN          NaN                        NaN                   NaN                NaN             NaN                   NaN                   NaN                     NaN             NaN                NaN             NaN                  NaN                         NaN                            NaN              NaN           NaN                 NaN                       NaN                 NaN                   NaN               NaN          NaN          NaN             NaN                   NaN                       NaN                      NaN                               NaN                      NaN               NaN          NaN            NaN              NaN                  NaN
+freq                1          NaN          NaN                        NaN                   NaN                NaN             NaN                   NaN                   NaN                     NaN             NaN                NaN             NaN                  NaN                         NaN                            NaN              NaN           NaN                 NaN                       NaN                 NaN                   NaN               NaN          NaN          NaN             NaN                   NaN                       NaN                      NaN                               NaN                      NaN               NaN          NaN            NaN              NaN                  NaN
+mean              NaN     1.613339    47.315609                  14.228581             21.385973           4.787302        3.868966             36.030254             87.809489              144.138895        0.614573          96.894660        6.735824           137.269769                  110.314921                       5.452074         7.654075     22.689411            5.220252                  0.092551            1.131561            200.826381         21.230190    58.291089   156.165437       68.425556             65.789817                153.819940                48.456910                         34.061242                19.986340        123.732065     3.239972      22.451292       481.815265             0.645427
+std               NaN     0.487041    14.445572                   1.149723              3.165974           0.820317        0.450879              8.082762             17.530104               28.228483        0.200610          45.586604        9.802020            77.745749                   32.608347                       1.008764        24.600637      4.171522            1.378957                  0.362897            0.374687            331.229169          2.952803    33.212053    14.705331       46.557602              7.447041                  7.854184                 3.488546                          4.029785                40.442427         22.608401     2.778287      12.314372       673.702857             0.478438
+min               NaN     1.000000     4.000000                   5.500000              2.000000           0.200000        1.000000              9.000000             11.100000               40.000000        0.060000          10.400000        0.600000            23.000000                   65.000000                       3.900000         0.700000      4.200000            1.560000                  0.020000            0.100000             33.500000          0.010000     2.000000     0.000000        0.000000              2.000000                  0.000000                 0.000000                          0.000000                 0.000000          0.000000     1.000000       1.000000        10.000000             0.000000
+25%               NaN     1.000000    36.000000                  14.200000             22.000000           4.800000        4.000000             34.000000             86.000000              139.000000        0.580000          92.000000        4.000000           123.000000                  103.000000                       5.200000         2.700000     23.400000            4.900000                  0.020000            1.100000            167.000000         20.800000    49.300000   151.000000        0.000000             64.700000                154.000000                48.500000                         33.500000                 0.000000        111.000000     2.000000      19.619493       240.000000             0.000000
+50%               NaN     2.000000    48.000000                  14.200000             22.000000           4.800000        4.000000             34.000000             86.000000              139.000000        0.580000          92.000000        4.000000           123.000000                  103.000000                       5.200000         2.700000     23.400000            4.900000                  0.020000            1.100000            167.000000         20.800000    67.600000   154.500000       90.100000             64.700000                154.000000                48.500000                         33.500000                 0.000000        121.000000     3.000000      26.229298       380.000000             1.000000
+75%               NaN     2.000000    58.000000                  14.200000             22.000000           4.800000        4.000000             34.000000             86.000000              139.000000        0.580000          92.000000        4.700000           123.000000                  103.000000                       5.200000         2.700000     23.400000            4.900000                  0.020000            1.100000            167.000000         20.800000    79.600000   162.900000      101.600000             64.700000                154.000000                48.500000                         33.500000                 0.000000        136.000000     4.000000      30.285913       585.000000             1.000000
+max               NaN     2.000000    93.000000                  19.900000             35.000000          11.000000        5.300000            279.000000            303.000000              681.000000        8.270000        2372.000000      264.100000          1320.000000                 1114.000000                      17.200000       613.200000    153.000000           50.000000                 10.780000           16.200000           7520.000000         50.900000   168.800000   192.000000      189.300000            151.200000                182.600000                97.300000                        105.200000               165.000000        200.000000    99.000000      60.513476     17820.000000             1.000000
+
+=== Valores Nulos ===
+FOLIO_I                             0
+sexo                                0
+edad                                0
+concentracion_hemoglobina           0
+temperatura_ambiente                0
+valor_acido_urico                   0
+valor_albumina                      0
+valor_colesterol_hdl                0
+valor_colesterol_ldl                0
+valor_colesterol_total              0
+valor_creatina                      0
+resultado_glucosa                   0
+valor_insulina                      0
+valor_trigliceridos                 0
+resultado_glucosa_promedio          0
+valor_hemoglobina_glucosilada       0
+valor_ferritina                     0
+valor_folato                        0
+valor_homocisteina                  0
+valor_proteinac_reactiva            0
+valor_transferrina                  0
+valor_vitamina_bdoce                0
+valor_vitamina_d                    0
+peso                                0
+estatura                            0
+medida_cintura                      0
+segundamedicion_peso                0
+segundamedicion_estatura            0
+distancia_rodilla_talon             0
+circunferencia_de_la_pantorrilla    0
+segundamedicion_cintura             0
+tension_arterial                    0
+sueno_horas                         0
+masa_corporal                       0
+actividad_total                     0
+riesgo_hipertension                 0

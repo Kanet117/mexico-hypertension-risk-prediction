@@ -1,2 +1,9 @@
 pandas
 scikit-learn
+numpy
+matplotlib
+seaborn
+xgboost
+lightgbm
+imbalanced-learn
+jupyter

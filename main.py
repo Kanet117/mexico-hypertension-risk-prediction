@@ -1,6 +1,8 @@
-from src.data_prep import load_and_clean_data, scale_features
-from utilities.logger import get_logger
 import os
+from src.data_prep import load_and_clean_data
+from src.train import train_models
+from src.evaluate import evaluate_models
+from utilities.logger import get_logger
 
 # Inicializamos el logger maestro
 logger = get_logger("Main_Orchestrator")
@@ -10,24 +12,37 @@ def main():
     logger.info("INICIANDO PIPELINE DE ANÁLISIS MÉDICO MIT")
     logger.info("==========================================")
 
-    data_path = os.path.join("data", "../data/raw/Hipertension_Arterial_Mexico.csv")
+    data_path = os.path.join("data", "raw", "Hipertension_Arterial_Mexico.csv")
     try:
-        X_raw, y = load_and_clean_data(data_path)
-        X_scaled = scale_features(X_raw)
-        logger.info("Verificando consistencia de los datos...")
-        if X_scaled.shape[0] == y.shape[0]:
-            logger.info(f"ÉXITO: Se procesaron {X_scaled.shape[0]} registros médicos.")
-            logger.info(f"Características detectadas: {list(X_scaled.columns)}")
+        # 1. Data Preparation
+        logger.info("--- Fase 1: Preparación de Datos ---")
+        X_train, X_test, y_train, y_test = load_and_clean_data(data_path)
+        logger.info(f"ÉXITO: Se procesaron los datos. Train shape: {X_train.shape}, Test shape: {X_test.shape}")
+        
+        # 2. Model Training
+        logger.info("\n--- Fase 2: Entrenamiento de Modelos ---")
+        train_success = train_models(data_path="data/processed/train.csv", model_dir="models/")
+        if train_success:
+            logger.info("ÉXITO: Modelos entrenados y guardados correctamente.")
         else:
-            logger.warning("ALERTA: Desajuste entre características y etiquetas.")
+            logger.error("Fallo en el entrenamiento de modelos.")
+            return
+            
+        # 3. Model Evaluation
+        logger.info("\n--- Fase 3: Evaluación de Modelos ---")
+        eval_success = evaluate_models(test_data_path="data/processed/test.csv", model_dir="models/", output_dir="output/")
+        if eval_success:
+            logger.info("ÉXITO: Modelos evaluados y resultados generados.")
+        else:
+            logger.error("Fallo en la evaluación de modelos.")
+            return
 
-        print("\n--- Vista previa de los datos procesados (X_scaled) ---")
-        print(X_scaled.head())
-        print("------------------------------------------------------\n")
     except Exception as e:
         logger.critical(f"Falla catastrófica en el pipeline: {e}", exc_info=True)
 
+    logger.info("==========================================")
     logger.info("PIPELINE FINALIZADO EXITOSAMENTE.")
+    logger.info("==========================================")
 
 if __name__ == "__main__":
     main()

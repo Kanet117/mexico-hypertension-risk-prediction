@@ -1,0 +1,13 @@
+Model Evaluation Results
+==============================
+
+             Model  ROC-AUC  Precision   Recall  F1-Score  Accuracy
+      RandomForest 0.999433   0.994662 0.992895  0.993778  0.991982
+  GradientBoosting 0.999931   1.000000 0.992895  0.996435  0.995418
+LogisticRegression 0.915029   0.911275 0.875666  0.893116  0.864834
+
+==============================
+Best Model (by ROC-AUC): GradientBoosting
+ROC-AUC: 0.9999
+Recall: 0.9929
+F1-Score: 0.9964
